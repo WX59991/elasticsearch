@@ -5,7 +5,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>elasticsearch-springboot</module>
-        <module>lucence</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

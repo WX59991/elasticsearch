@@ -22,9 +22,9 @@ public class Article{
     //index：是否设置分词 analyzer：存储时使用的分词器 searchAnalyze：搜索时使用的分词器  store：是否存储  type: 数据类型
     @Field(store = true,index = false,type = FieldType.Integer)
     private Integer id;
-    @Field(index=true,analyzer="ik_max_word",store=true,searchAnalyzer="ik_smart",type = FieldType.Text)
+    @Field(index=true,analyzer="ik_max_word",store=true,searchAnalyzer="ik_max_word",type = FieldType.Text)
     private String title;
-    @Field(index=true,analyzer="ik_max_word",store=true,searchAnalyzer="ik_smart",type = FieldType.Text)
+    @Field(index=true,analyzer="ik_max_word",store=true,searchAnalyzer="ik_max_word",type = FieldType.Text)
     private String content;
 
 }
