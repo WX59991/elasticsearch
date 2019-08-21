@@ -59,7 +59,7 @@ public class LucenceTest {
         document.add(new TextField("content",article.getContent(),Field.Store.YES));
         //创建IndexWriter字符流对象
         //索引存放位置
-        Directory directory= FSDirectory.open(Paths.get("C:\\work\\workspace\\sentinel-tutorial-master\\elasticsearch-parent\\IndexDBDBDB"));
+        Directory directory= FSDirectory.open(Paths.get("C:\\work\\workspace\\IndexDBDBDB"));
         //创建分词器
         //标准分词器
         StandardAnalyzer analyzer=new StandardAnalyzer();
