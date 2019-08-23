@@ -1,4 +1,4 @@
-package com.elasticsearch.elasticsearch.tree;
+package com.elasticsearch.elasticsearch.tree.common;
 
 import lombok.Data;
 
@@ -10,14 +10,18 @@ import lombok.Data;
 @Data
 public class Node {
 
-    private Integer value;
+    protected Integer value;
 
-    private Node left;
+    protected Node left;
 
-    private Node right;
+    protected Node right;
 
     public Node(Integer value){
         this.value=value;
+    }
+
+    public Node(){
+
     }
 
 }

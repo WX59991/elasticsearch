@@ -1,5 +1,7 @@
 package com.elasticsearch.elasticsearch.tree;
 
+import com.elasticsearch.elasticsearch.tree.common.Node;
+
 /**
  * @author wangxia
  * @date 2019/8/21 15:00

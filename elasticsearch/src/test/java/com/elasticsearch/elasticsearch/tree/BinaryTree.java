@@ -1,5 +1,8 @@
 package com.elasticsearch.elasticsearch.tree;
 
+import com.elasticsearch.elasticsearch.tree.common.Node;
+import com.elasticsearch.elasticsearch.tree.common.Tree;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,9 +11,7 @@ import java.util.List;
  * @date 2019/8/21 14:14
  * @Description:  二叉树
  */
-public class BinaryTree {
-
-    protected Node head;
+public class BinaryTree extends Tree<Node> {
 
     List<Node> nodeList;
 
@@ -40,56 +41,4 @@ public class BinaryTree {
         nodeList.remove(0);
         return;
     }
-
-    /**
-     * 树的前序遍历
-     */
-    public void preorderTraversal(){
-        preorderTraversalDieDai(head);
-    }
-
-    private void preorderTraversalDieDai(Node node){
-        System.out.print(node.getValue()+"\t");
-        if(node.getLeft()!=null){
-            preorderTraversalDieDai(node.getLeft());
-        }
-        if(node.getRight()!=null){
-            preorderTraversalDieDai(node.getRight());
-        }
-    }
-
-    /***
-     * 树的中序遍历
-     */
-    public void intermediateTraversal(){
-        intermediateTraversalDieDai(head);
-    }
-
-    private void intermediateTraversalDieDai(Node node){
-        if(node.getLeft()!=null){
-            intermediateTraversalDieDai(node.getLeft());
-        }
-        System.out.print(node.getValue()+"\t");
-        if(node.getRight()!=null){
-            intermediateTraversalDieDai(node.getRight());
-        }
-    }
-
-    /**
-     * 树的后序遍历
-     */
-    public void postorderTraversal(){
-        postorderTraversalDieDai(head);
-    }
-
-    private void postorderTraversalDieDai(Node node){
-        if(node.getLeft()!=null){
-            postorderTraversalDieDai(node.getLeft());
-        }
-        if(node.getRight()!=null){
-            postorderTraversalDieDai(node.getRight());
-        }
-        System.out.print(node.getValue()+"\t");
-    }
-
 }
