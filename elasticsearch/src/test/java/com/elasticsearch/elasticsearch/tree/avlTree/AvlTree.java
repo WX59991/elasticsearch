@@ -54,7 +54,7 @@ public class AvlTree extends Tree<AvlNode> {
     private void insertLeft(AvlNode avlNode, int val) {
         int newHeight = avlNode.getHeight() + 1;
         boolean isLeft = head.getValue() > val;
-        //判断是否需要单旋或双旋
+        //判断是否需要单旋或双旋   当数高差>2的时候就需要旋转了
         if (avlNode.getPrev() == null || newHeight - Math.min(maxRightHeight, maxLeftHeight) < 2) {
             //不需要单旋直接插入
             avlNode.setLeft(new AvlNode(avlNode, val, newHeight));
