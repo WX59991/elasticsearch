@@ -13,11 +13,21 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 @Configuration
 public class ESConfig {
 
+//    @Bean("transportClient")
+//    public TransportClient transportClient() throws UnknownHostException {
+//        InetAddress inetAddress=InetAddress.getByName("132.46.118.17");
+//        TransportAddress transportAddress=new TransportAddress(inetAddress,9300);
+//        TransportClient client = new PreBuiltXPackTransportClient(Settings.builder()
+//                .put("cluster.name", "elastic")
+//                .put("xpack.security.user", "elastic:elk@2019")
+//                .build()).addTransportAddresses();
+//        return client;
+//    }
     
 
     @Bean(name = "elasticsearchTemplate")
-    public ElasticsearchTemplate getElasticsearchTemplate(TransportClient client){
-        return new ElasticsearchTemplate(client);
+    public ElasticsearchTemplate getElasticsearchTemplate(TransportClient transportClient){
+        return new ElasticsearchTemplate(transportClient);
     }
 
 }

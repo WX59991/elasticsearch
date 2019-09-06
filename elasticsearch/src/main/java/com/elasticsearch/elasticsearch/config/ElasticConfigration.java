@@ -39,6 +39,7 @@ public class ElasticConfigration {
     public void initialize() throws Exception{
         Settings esSetting=Settings.builder()
                 .put("cluster.name", esClusterName)
+                .put("","")
                 .put("client.transport.sniff", true).build();  //增加嗅探功能
         client = new PreBuiltTransportClient(esSetting);
         String[] esHosts = esHost.trim().split(",");

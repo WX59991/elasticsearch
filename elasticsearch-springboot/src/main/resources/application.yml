@@ -1,7 +1,7 @@
 server:
-  port: 8080
+  port: 10008
 spring:
   data:
     elasticsearch:
-      cluster-name: esCluster #默认为elasticsearch
-      cluster-nodes: 10.3.117.43:9300 #配置es节点信息，用,分隔,如果没有指定，则启动ClientNode（9200端口是http查询使用的。9300集群使用。这里使用9300.）
+      cluster-name: my-application
+      cluster-nodes: 10.9.117.43:9300
